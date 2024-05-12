@@ -39,10 +39,10 @@ function footer(){
       <i class="fa-brands fa-instagram itemfooter mx-4"></i>
 
   </div>
-     
+  
   <div class="footerinf mt-4">
-     <label class="mt-2 mx-3"><a class="mail" href="mailto:admin@shopping.com.ar" target="_blank">admin@shopping.com.ar</a></label>
-     <label><p>Copyright © ShoppingUtn™</p></label>
+    <label class="mt-3"><a class="mail" href="mailto:admin@shopping.com.ar" target="_blank">admin@shopping.com.ar</a></label>
+    <label><p>Copyright © ShoppingUtn™</p></label>
   </div>
   </footer>  
   HTML;

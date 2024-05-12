@@ -49,11 +49,11 @@
         
         <h2>Shopping UTN, tu lugar ideal</h2>
         <div class="row">
-          <div class="col">
-          <p>¡Bienvenido a Shopping UTN, tu destino de compras favorito! En nuestro emocionante universo de moda, tecnología y entretenimiento, encontrarás todo lo que necesitas y mucho más. Desde las últimas tendencias en moda hasta los dispositivos más innovadores, nuestra amplia selección de productos está diseñada para satisfacer todas tus necesidades y deseos.</p>
-          </div>
-          <div class="col"><p>Pero en Shopping UTN, no somos solo un destino de compras; somos una comunidad vibrante que celebra la diversidad y la creatividad. Nuestra misión es crear experiencias únicas para nuestros clientes, donde puedan descubrir nuevas inspiraciones, conectarse con otros amantes de las compras y sentirse parte de algo especial.<p>
-          </div>
+        <div class="col">
+            <p>¡Bienvenido a Shopping UTN, tu destino de compras favorito! En nuestro emocionante universo de moda, tecnología y entretenimiento, encontrarás todo lo que necesitas y mucho más. Desde las últimas tendencias en moda hasta los dispositivos más innovadores, nuestra amplia selección de productos está diseñada para satisfacer todas tus necesidades y deseos.</p>
+        </div>
+        <div class="col"><p>Pero en Shopping UTN, no somos solo un destino de compras; somos una comunidad vibrante que celebra la diversidad y la creatividad. Nuestra misión es crear experiencias únicas para nuestros clientes, donde puedan descubrir nuevas inspiraciones, conectarse con otros amantes de las compras y sentirse parte de algo especial.<p>
+        </div>
         </div>
     </section>
 
@@ -63,29 +63,32 @@
         <div class="container py-5">
         <div class="row row-cols-1 row-cols-md-3">
             <div class="col">
-                <div class="card h-100">
+                <div class="card h-100 border-dark-subtle">
                 <img src="source/promociones.png" class="card-img-top" alt="promociones">
                 <div class="card-body">
                     <h5 class="card-title">Promociones</h5>
                     <p class="card-text">Accedé las mejores promociones de todo Rosario con el poder de un solo click!</p>
+                    <a href="#" class="btn btn-outline-primary w-100" >Click aquí</a>
                 </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card h-100">
+                <div class="card h-100 border-dark-subtle">
                 <img src="source/novedades.png" class="card-img-top" alt="novedades">
                 <div class="card-body">
                     <h5 class="card-title">Novedades</h5>
-                    <p class="card-text">Estate al tanto de los nuevos eventos que suceden sobre tus locales favoritos</p>
+                    <p class="card-text">Estate al tanto de los nuevos eventos que suceden sobre tus locales favoritos.</p>
+                    <a href="#" class="btn btn-outline-primary w-100">Click aquí</a>
                 </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card h-100">
+                <div class="card h-100 border-dark-subtle">
                 <img src="source/dueño.png" class="card-img-top" alt="creá tu local">
                 <div class="card-body">
-                    <h5 class="card-title">¿Querés ser tu propio jefe?</h5>
+                    <h5 class="card-title">¿Querés instalar tu marca?</h5>
                     <p class="card-text">Convertite en el dueño de un local y unite a nuestro shopping!</p>
+                    <a href="#" class="btn btn-outline-primary w-100">Click aquí</a>
                 </div>
                 </div>
             </div>
