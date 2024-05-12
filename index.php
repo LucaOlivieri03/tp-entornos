@@ -65,7 +65,8 @@
             <div class="col">
                 <div class="card h-100 border-dark-subtle">
                 <img src="source/promociones.png" class="card-img-top" alt="promociones">
-                <div class="card-body">
+                <hr>
+                <div class="card-body pt-0">
                     <h5 class="card-title">Promociones</h5>
                     <p class="card-text">Accedé las mejores promociones de todo Rosario con el poder de un solo click!</p>
                     <a href="#" class="btn btn-outline-primary w-100" >Click aquí</a>
@@ -75,7 +76,8 @@
             <div class="col">
                 <div class="card h-100 border-dark-subtle">
                 <img src="source/novedades.png" class="card-img-top" alt="novedades">
-                <div class="card-body">
+                <hr>
+                <div class="card-body pt-0">
                     <h5 class="card-title">Novedades</h5>
                     <p class="card-text">Estate al tanto de los nuevos eventos que suceden sobre tus locales favoritos.</p>
                     <a href="#" class="btn btn-outline-primary w-100">Click aquí</a>
@@ -85,7 +87,8 @@
             <div class="col">
                 <div class="card h-100 border-dark-subtle">
                 <img src="source/dueño.png" class="card-img-top" alt="creá tu local">
-                <div class="card-body">
+                <hr>
+                <div class="card-body pt-0">
                     <h5 class="card-title">¿Querés instalar tu marca?</h5>
                     <p class="card-text">Convertite en el dueño de un local y unite a nuestro shopping!</p>
                     <a href="#" class="btn btn-outline-primary w-100">Click aquí</a>
