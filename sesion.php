@@ -13,74 +13,81 @@
 
 <body>
 
-<!-- Navbar  -->
-<?php
-include_once "navbarfooter.php";  /* NO ANDA */
-    navbar();
-?>
+    <!-- Navbar  -->
+    <?php
+    include_once "navbarfooter.php";
+        navbar();
+    ?>
 
-<!--login-->
-<section class="vh-100">
-    <div class="container-fluid">
-        <div class="row bg-secondary">
-            <div class="col-sm-6 text-black">
+    <!--login-->
+    <section class="vh-100">
+        <div class="container-fluid">
+            <div class="row bg-secondary">
+                <div class="col-sm-6 text-black">
 
-                <div class="px-5 ms-xl-4 py-5">
-                <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4""></i>
-                <span class="h1 fw-bold mb-0">Shopping UTN</span>
+                    <div class="px-5 ms-xl-4 py-5">
+                    <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4""></i>
+                    <span class="h1 fw-bold mb-0">Shopping UTN</span>
+                    </div>
+
+                    <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+
+                    <form style="width: 23rem;">
+
+                        <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Inicia sesión</h3>
+
+                        <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="email" id="mailinicio" class="form-control form-control-lg" />
+                        <label class="form-label" for="mailinicio">Dirección de Email</label>
+                        </div>
+
+                        <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="password" id="pswinicio" class="form-control form-control-lg" />
+                        <label class="form-label" for="pswinicio">Contraseña</label>
+                        </div>
+
+                        <div class="pt-1 mb-4">
+                        <button data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-lg btn-block" type="button">Ingresar</button>
+                        </div>
+
+                        <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">¿Olvidaste tu contraseña?</a></p>
+                        <p>¿No tienes cuenta? <a href="#!" class="link-info">Registrate aquí</a></p>
+
+                    </form>
+
+                    </div>
+
                 </div>
-
-                <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
-
-                <form style="width: 23rem;">
-
-                    <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Inicia sesión</h3>
-
-                    <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="email" id="mailinicio" class="form-control form-control-lg" />
-                    <label class="form-label" for="mailinicio">Dirección de Email</label>
-                    </div>
-
-                    <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="password" id="pswinicio" class="form-control form-control-lg" />
-                    <label class="form-label" for="pswinicio">Contraseña</label>
-                    </div>
-
-                    <div class="pt-1 mb-4">
-                    <button data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-lg btn-block" type="button">Ingresar</button>
-                    </div>
-
-                    <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">¿Olvidaste tu contraseña?</a></p>
-                    <p>¿No tienes cuenta? <a href="#!" class="link-info">Registrate aquí</a></p>
-
-                </form>
-
+                    
+                <div class="col-sm-6 px-0 d-none d-sm-block">
+                    <div id="carruselses" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="crs1 critemses"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="crs2 critemses"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="crs3 critemses"></div>
+                                </div>
+                        </div>
                 </div>
-
-            </div>
-                
-            <div class="col-sm-6 px-0 d-none d-sm-block">
-                <div id="carruselses" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="crs1 critemses"></div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="crs2 critemses"></div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="crs3 critemses"></div>
-                            </div>
-                    </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Footer  -->
-<?php
-footer();
-?>
+    <!-- Footer  -->
+    <?php
+    footer();
+    ?>
+    <!-- Scripts  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 
