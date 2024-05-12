@@ -5,14 +5,14 @@ function navbar(){
     <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top py-0">
     <div class="container-fluid contenedornavbar py-2"> <!-- NO CIERRA -->
-      <a class="navbar-brand mx-lg-4" href="#"><img width="30px" src="source/logoutn.png"></a>
-      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand mx-lg-4" href="https://www.frro.utn.edu.ar/" target="_blank"><img width="30px" src="source/logoutn.png"></a>
+      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+            <a class="nav-link active text-light" aria-current="page" href="index.php">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-light" href="#">Novedades</a>
@@ -21,11 +21,12 @@ function navbar(){
             <a class="nav-link text-light" href="#">Promociones</a>
           </li>
         </ul>
-        <a class="nav-link text-light ms-auto mx-5 py-2" href="#">Iniciar sesión</a>
+        <a class="nav-link text-light ms-auto mx-5 py-2" href="sesion.php">Iniciar sesión</a>
       </div>
     </div>
   </nav>
   </header>
+  
   HTML;
   
 };

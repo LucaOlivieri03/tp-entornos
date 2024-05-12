@@ -1,9 +1,8 @@
 
-
 .critemses {
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 100%;
     filter: brightness(80%);
 }
 
@@ -19,6 +18,25 @@
     background-image: url(source/shopping3.jpg);
 }
 
+.logo {
+    margin-bottom: 8px;
+    margin-right: 10px;
+}
+
+.formu {
+    width: 40rem; 
+    border: 1px solid black;
+    border-radius: 3%;
+    background-color: rgb(229, 229, 229);
+    padding: 30px;
+    box-shadow: rgb(94, 90, 90) 2px 2px 20px;
+}
+
+.fondoformu {
+    background-image: url("source/fondologin.jpg");
+    background-position: center;
+    background-size: cover;
+}
 
 @media (max-width: 767px) {
     .critemses {

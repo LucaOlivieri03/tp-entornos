@@ -1,4 +1,3 @@
-
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -33,8 +32,8 @@
 
                     <div class="text-black d-flex align-items-center justify-content-center px-5 mt-md-5 pt-5 pt-xl-0 mt-xl-n5">
                         
-                        <form class="formu my-5" method="post">
-                            <h3 class="mb-3 pb-3">Iniciar sesión</h3>
+                        <form class="formu my-3" method="post">
+                            <h3 class="mb-3 pb-3">Registrarse</h3>
                             <div data-mdb-input-init class="form-outline mb-4">
                                 <input placeholder="ej: lucaolivieri3@gmail.com" type="email" id="mailinicio" class="form-control form-control-lg border-dark"/>
                                 <label class="form-label" for="mailinicio">Dirección de Email</label>
@@ -45,12 +44,20 @@
                                 <label class="form-label" for="pswinicio">Contraseña</label>
                             </div>
 
+                            <div data-mdb-input-init class="form-outline mb-1">
+                                <input type="password" id="pswcinicio" class="form-control form-control-lg border-dark" />
+                                <label class="form-label" for="pswcinicio">Confirmar contraseña</label>
+                            </div>
+
+                            <div class="mb-3">
+                                <input type="checkbox" id="terminosycondiciones" class="form-check-input">
+                                <label class="form-check-label" for="terminosycondiciones"> Acepto los términos y condiciones </label>
+                            </div>
+
                             <div class="pt-1 mb-4">
                                 <button data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-lg btn-block" type="submit">Ingresar</button>
                             </div>
-
-                            <p class="small mb-4 pb-lg-2"><a class="text-muted" href="#!">¿Olvidaste tu contraseña?</a></p>
-                            <p>¿No tienes cuenta? <a href="registro.php" class="text-dark">Registrate aquí</a></p>
+                            <p>Tienes cuenta? <a href="sesion.php" class="text-dark">Logueate aquí</a></p>
 
                         </form>
                     </div>
@@ -81,6 +88,7 @@
     <!-- Scripts  -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
 
 </body>
 
