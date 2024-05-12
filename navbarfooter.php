@@ -2,7 +2,7 @@
 
 function navbar(){
     echo <<<"HTML"
-
+    <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top py-0">
     <div class="container-fluid contenedornavbar py-2"> <!-- NO CIERRA -->
       <a class="navbar-brand mx-lg-4" href="#"><img width="30px" src="source/logoutn.png"></a>
@@ -25,6 +25,7 @@ function navbar(){
       </div>
     </div>
   </nav>
+  </header>
   HTML;
   
 };

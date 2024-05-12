@@ -1,0 +1,27 @@
+
+
+.critemses {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    filter: brightness(80%);
+}
+
+.crs1 {
+    background-image: url(source/shopping1.jpg);
+}
+
+.crs2 {
+    background-image: url(source/shopping2.jpg);
+}
+
+.crs3 {
+    background-image: url(source/shopping3.jpg);
+}
+
+
+@media (max-width: 767px) {
+    .critemses {
+        display: none;
+    }
+}

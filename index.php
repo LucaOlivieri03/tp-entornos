@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    
+
     <!-- Navbar  -->
     <?php
         include_once "navbarfooter.php";
