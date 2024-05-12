@@ -1,5 +1,38 @@
 
+.critem {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    filter: brightness(80%);
+}
 
-.fotocarrusel{
-    height: 20px;
+
+.cr1 {
+    background-image: url(source/shopping1.jpg);
+}
+
+.cr2 {
+    background-image: url(source/shopping2.jpg);
+}
+
+.cr3 {
+    background-image: url(source/shopping3.jpg);
+}
+
+.cartas {
+    background-color: rgb(241, 241, 241);
+    padding: 20px;
+}
+
+
+@media (max-width: 767px) {
+    .critem {
+        display: none;
+    }
+
+    .shopping {
+        margin-top: 20%;
+        margin-bottom: 7%;
+    }
+
 }
