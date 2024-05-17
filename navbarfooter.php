@@ -21,7 +21,7 @@ function navbar(){
             <a class="nav-link text-light" href="#">Promociones</a>
           </li>
         </ul>
-        <a class="nav-link text-light ms-auto mx-5 py-2" href="sesion.php">Iniciar sesión</a>
+        <a class="nav-link text-light ms-auto mx-5 py-2" href="login.php">Iniciar sesión</a>
       </div>
     </div>
   </nav>
