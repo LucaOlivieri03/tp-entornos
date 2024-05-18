@@ -39,7 +39,7 @@ $textoError = "Error";
 function validarMail($mail, $bd){
         global $textoError;
         $patronMail = "/^[a-zA-Z0-9._]+@[a-zA-Z0-9._]+\.[a-zA-Z]+$/";
-        if($mail != '' && preg_match($patronMail,$mail) && strlen($mail) <= 100){
+        if($mail != '' && preg_match($patronMail,$mail) && strlen($mail) <= 100 && filter_var($mail, FILTER_VALIDATE_EMAIL)){
             $bd = $bd->query("SELECT * FROM usuarios WHERE usuario_mail = '$mail'");
             if($bd->rowCount() == 0){
                 return true; 
