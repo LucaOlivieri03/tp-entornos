@@ -15,7 +15,26 @@
 </head>
 
 <body>
+    <?php 
+        
+        session_name("usuario");
+        session_start();
 
+        if(isset($_SESSION['mail'])){
+            include_once("funciones.php"); 
+            cerrarSesion();
+            if(isset($_POST['cs'])){
+                if($_POST["cs"] == "cs"){
+                    session_unset();
+                    echo "<script> window.location.href='login.php'</script>";
+                }
+            }
+
+        } else {
+            session_destroy();
+            
+        
+    ?>
     <!-- Navbar  -->
     <?php
     include_once "navbarfooter.php";
@@ -86,6 +105,7 @@
     <!-- Footer  -->
     <?php
     footer();
+    }
     ?>
     <!-- Scripts  -->
 

@@ -1,5 +1,8 @@
 
-<?php include_once("crear_cuenta.php")?>
+<?php include_once("crear_cuenta.php");
+    
+?>
+      
 
 <html lang="es">
 <head>
@@ -14,6 +17,25 @@
 </head>
 
 <body>
+    
+    <?php 
+        session_name("usuario");
+        session_start();
+
+        if(isset($_SESSION['mail'])){
+            include_once("funciones.php");
+            cerrarSesion();
+            if(isset($_POST['cs'])){
+                if($_POST["cs"] == "cs"){
+                    session_unset();
+                    echo "<script> window.location.href='registro.php'</script>";
+                }
+            }
+
+        } else {
+            session_destroy();
+        
+    ?>
 
     <!-- Navbar  -->
     <?php
@@ -68,6 +90,9 @@
                             <div class="pt-1 mb-4">
                                 <button data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-lg btn-block" type="submit">Ingresar</button>
                             </div>
+                            <?php if(isset($_POST['mail']) && session_status() != 2){
+                                    echo '<p class="text-danger">'.$textoError.'</p>';
+                                 } ?>
                             <p>Tienes cuenta? <a href="login.php" class="text-dark">Logueate aquí</a></p>
                         </form>
                     </div>
@@ -94,12 +119,13 @@
     <!-- Footer  -->
     <?php
     footer();
+    }
     ?>
     <!-- Scripts  -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
-
+    
 </body>
 
 </html>

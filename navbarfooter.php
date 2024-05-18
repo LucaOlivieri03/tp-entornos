@@ -4,7 +4,7 @@ function navbar(){
     echo <<<"HTML"
     <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top py-0">
-    <div class="container-fluid contenedornavbar py-2"> <!-- NO CIERRA -->
+    <div class="container-fluid contenedornavbar py-2"> <!-- CAMBIAR CONTENIDO NAVBAR SEGÚN QUIEN INGRESE -->
       <a class="navbar-brand mx-lg-4" href="https://www.frro.utn.edu.ar/" target="_blank"><img width="30px" src="source/logoutn.png"></a>
       <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
