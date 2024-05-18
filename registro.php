@@ -1,3 +1,6 @@
+
+<?php include_once("crear_cuenta.php")?>
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -34,23 +37,23 @@
                         
                         <form class="formu my-3" method="post">
                             <h3 class="mb-3 pb-3">Registrarse</h3>
-                            <div data-mdb-input-init class="form-outline mb-4">
-                                <input name="mail" placeholder="ej: lucaolivieri3@gmail.com" type="email" id="mailinicio" class="form-control form-control-lg border-dark"/>
+                            <div class="form-outline mb-4">
+                                <input name="mail" placeholder="ej: lucaolivieri3@gmail.com" type="email" id="mailinicio" class="form-control form-control-lg border-dark" pattern="[a-zA-Z0-9._]+@[a-zA-Z0-9._]+.[a-zA-Z]" minlength="1" maxlength="100" required/>
                                 <label class="form-label" for="mailinicio">Dirección de Email</label>
                             </div>
 
                             <div data-mdb-input-init class="form-outline mb-4">
-                                <input name="psw" type="password" id="pswinicio" class="form-control form-control-lg border-dark" />
+                            <input name="psw" type="password" id="pswinicio" pattern="[a-zA-Z0-9]{3,8}" class="form-control form-control-lg border-dark" minlength="3" maxlength="8" required />
                                 <label class="form-label" for="pswinicio">Contraseña</label>
                             </div>
 
                             <div data-mdb-input-init class="form-outline mb-4">
-                                <input name="pswc" type="password" id="pswcinicio" class="form-control form-control-lg border-dark" />
+                                <input name="pswc" pattern="[a-zA-Z0-9]{3,8}" minlength="3" maxlength="8" type="password" id="pswcinicio" class="form-control form-control-lg border-dark" required />
                                 <label class="form-label" for="pswcinicio">Confirmar contraseña</label>
                             </div>
 
                             <div class="mb-3">
-                            <select class="form-control form-control-lg border-dark" name="tipo" id="tipo" aria-label="Default select example">
+                            <select class="form-control form-control-lg border-dark" name="tipo" id="tipo" aria-label="Default select example" required>
                                 <option value="cliente">Cliente</option>
                                 <option value="dueno">Dueño de Local</option>
                             </select>
@@ -58,15 +61,14 @@
                             </div>
 
                             <div class="mb-3" >
-                                <input name="terminos" type="checkbox" id="terminosycondiciones" class="form-check-input">
-                                <label class="form-check-label" for="terminosycondiciones"> Acepto los términos y condiciones </label>
+                                <input name="terminos" value="si" type="checkbox" id="terminosycondiciones" class="form-check-input" required>
+                                <label class="form-check-label" for="terminosycondiciones" > Acepto los términos y condiciones </label>
                             </div>
 
                             <div class="pt-1 mb-4">
                                 <button data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-lg btn-block" type="submit">Ingresar</button>
                             </div>
                             <p>Tienes cuenta? <a href="login.php" class="text-dark">Logueate aquí</a></p>
-
                         </form>
                     </div>
                 </div>

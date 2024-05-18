@@ -13,22 +13,19 @@ if(isset($_POST['mail'])):
         session_start();
         $_SESSION['mail'] = $mail;
         $_SESSION['psw'] = $psw;
-        header("index.php");
-
-    } else {
+        echo "<script> window.location.href='index.php'</script>";
         
-    }
-
+    } 
 endif;
 
 
-
 function validarUsuario($mail, $psw, $bd){
-    $bd = $bd->query("SELECT * FROM usuarios WHERE usuario_mail = '$mail'");
+    echo $mail;
+    $bd = $bd->query("SELECT * FROM usuarios WHERE usuario_mail = 'ignaciolurati@gmail.com'");
 
-    if($bd->num_rows > 0){
-        $datos = $bd->fetch_assoc();
-        if($datos["usuario_psw"] == $psw){
+    if($bd->rowCount() > 0){
+        $datos = $bd->fetch(PDO::FETCH_ASSOC);
+        if(password_verify($psw, $datos["usuario_psw"])){
             return true;
         }
     }
