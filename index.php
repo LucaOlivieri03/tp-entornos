@@ -14,6 +14,8 @@
 
     <!-- Navbar  -->
     <?php
+        session_name("usuario");
+        session_start();
         include_once "navbarfooter.php";
         navbar();
         

@@ -9,7 +9,7 @@ function conexion(){
 function cerrarSesion(){
     $email = $_SESSION['mail'];
 
-    echo "<div class='alert alert-primary container mt-5' role='alert'><p>Usted se encuentra logueado como " .$email."</p></div>";
+    echo "<div class='alert alert-primary container mt-5' role='alert'><p>Usted se encuentra logueado como " .$email."<br>¿Desea cerrar la sesión?</p></div>";
     echo <<<"HTML"
 
         <div class="container alert-primary mt-1">

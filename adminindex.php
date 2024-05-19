@@ -2,7 +2,7 @@
 <?php 
         session_name("usuario");
         session_start();
-        if(!isset($_SESSION['mail'])){
+        if(isset($_SESSION['mail'])){
            if(!($_SESSION['mail'] == "admin@shopping.com")){
             echo "<script> window.location.href='index.php'</script>";
            }
