@@ -1,0 +1,52 @@
+
+.foto-general {
+    background-size: cover;
+    filter: brightness(80%);
+    background-position: center;
+    border: black solid 1px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgb(41, 40, 40);
+}
+
+.foto-general:hover {
+    box-shadow: 2px 2px 20px rgb(41, 40, 40);
+    filter: brightness(100%);
+    transition: box-shadow 0.4s;
+    transition: filter 0.4s;
+}
+
+.texto-foto {
+    padding:20%;
+    color: rgb(0, 98, 255);
+    font-size: 200%;
+}
+
+#foto1 {
+    background-image: url(source/dueño.png);
+    
+
+}
+
+#foto2 {
+    background-image: url(source/novedades.png);
+
+}
+
+#foto3 {
+    background-image: url(source/promociones.png);
+
+}
+
+@media (max-width: 768px) {
+    .foto-general {
+        filter: brightness(100%);
+        background-position: center;
+        border: black solid 1px;
+        border-radius: 0px;
+        box-shadow: 0px 0px 0px rgb(41, 40, 40);
+    }
+    
+    .foto-general:hover {
+        box-shadow: 0px 0px 0px rgb(41, 40, 40);
+    }
+}
