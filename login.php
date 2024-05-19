@@ -57,13 +57,13 @@
                         
                         <form class="formu my-5" method="post">
                             <h3 class="mb-3 pb-3">Iniciar sesión</h3>
-                            <div data-mdb-input-init class="form-outline mb-4">
-                                <input name="mail" placeholder="ej: lucaolivieri3@gmail.com" type="email" id="mailinicio" class="form-control form-control-lg border-dark"/>
+                            <div data-mdb-input-init class="form-outline mb-4"> 
+                                <input name="mail" placeholder="ej: lucaolivieri3@gmail.com" type="email" id="mailinicio" class="form-control form-control-lg border-dark" required/>
                                 <label class="form-label" for="mailinicio">Dirección de Email</label>
                             </div>
 
                             <div data-mdb-input-init class="form-outline mb-4">
-                                <input name="psw" type="password" id="pswinicio" class="form-control form-control-lg border-dark" />
+                                <input name="psw" type="password" id="pswinicio" class="form-control form-control-lg border-dark" required/>
                                 <label class="form-label" for="pswinicio">Contraseña</label>
                             </div>
 

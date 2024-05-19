@@ -28,7 +28,7 @@ function navbar(){
                 </ul> 
           HTML;
       echo $boton;
-      echo <<<HTML
+      echo <<<"HTML"
                     </div>
                   </div>
                 </nav>

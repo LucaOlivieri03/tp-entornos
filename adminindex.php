@@ -9,7 +9,7 @@
         }
 
         include_once "navbarfooter.php";
-        navbar();
+        
     ?>
 
 <html lang="es">
@@ -23,13 +23,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/735bc52976.js" crossorigin="anonymous"></script>
 </head>
-<body>
-
+<body style="background-color: rgb(241, 241, 241);">
+    <?php navbar();?>
    
     <section class="container" style="margin-top: 5%; text-align:center; margin-bottom: 5%"> 
         <h1>Bienvenido administrador! ¿Qué desea hacer hoy?</h1>
            <div class="row row-cols-1 row-cols-md-3">
-              <a class="col pd-5" href="#" style="text-decoration: none;"><div id="foto1" class="foto-general"><p class="texto-foto"></p></div></a>
+              <a class="col pd-5" href="crearlocales.php" style="text-decoration: none;"><div id="foto1" class="foto-general"><p class="texto-foto"></p></div></a>
               <a class="col" href="#" style="text-decoration: none;"><div id="foto2" class="foto-general"><p class="texto-foto"></p></div></a>
               <a class="col" href="#" style="text-decoration: none;"><div id="foto3" class="foto-general"><p class="texto-foto"></p></div></a>
            </div>

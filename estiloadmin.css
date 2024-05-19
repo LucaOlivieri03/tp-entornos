@@ -37,6 +37,7 @@
 
 }
 
+
 @media (max-width: 768px) {
     .foto-general {
         filter: brightness(100%);
