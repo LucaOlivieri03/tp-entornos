@@ -6,7 +6,7 @@ function navbar(){
     }else{
       $boton = '<a class="nav-link text-light ms-auto mx-5 py-2" href="login.php">Cerrar sesión</a>' ;
     }
-     echo <<<"HTML"
+    echo <<<"HTML"
             <header>
             <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top py-0">
             <div class="container-fluid contenedornavbar py-2">
@@ -19,6 +19,17 @@ function navbar(){
                   <li class="nav-item">
                     <a class="nav-link active text-light" aria-current="page" href="index.php">Home</a>
                   </li>
+            HTML;
+            if(isset($_SESSION['mail'])){
+              if($_SESSION['mail'] == 'admin@shopping.com'){
+                echo <<<HTML
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="adminindex.php">Panel de Control</a>
+                  </li>
+                HTML;
+              }
+          } else{
+              echo <<<HTML
                   <li class="nav-item">
                     <a class="nav-link text-light" href="#">Novedades</a>
                   </li>
@@ -27,6 +38,7 @@ function navbar(){
                   </li>
                 </ul> 
           HTML;
+          }
       echo $boton;
       echo <<<"HTML"
                     </div>
@@ -34,7 +46,6 @@ function navbar(){
                 </nav>
                 </header>
               HTML;
-
 };
 
 function footer(){
