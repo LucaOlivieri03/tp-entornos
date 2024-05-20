@@ -1,18 +1,3 @@
-
-<?php 
-        session_name("usuario");
-        session_start();
-        if(isset($_SESSION['mail'])){
-           if(!($_SESSION['mail'] == "admin@shopping.com")){
-            echo "<script> window.location.href='index.php'</script>";
-           }
-        }
-
-        include_once "navbarfooter.php";
-        include_once "creacionlocal.php";
-        
-    ?>
-
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -27,6 +12,21 @@
 
 <body style="background-color: rgb(241, 241, 241)">
     <?php 
+    
+    session_name("usuario");
+    session_start();
+    if(isset($_SESSION['mail'])){
+       if(!($_SESSION['mail'] == "admin@shopping.com")){
+        echo "<script> window.location.href='index.php'</script>";
+       }
+    } else {
+        echo "<script> window.location.href='index.php'</script>";
+       }
+
+    include_once "navbarfooter.php";
+    include_once "creacionlocal.php";
+    
+
     navbar();?>
     
     <section class="container" style="margin-top: 100px">

@@ -1,17 +1,4 @@
 
-<?php 
-        session_name("usuario");
-        session_start();
-        if(isset($_SESSION['mail'])){
-           if(!($_SESSION['mail'] == "admin@shopping.com")){
-            echo "<script> window.location.href='index.php'</script>";
-           }
-        }
-
-        include_once "navbarfooter.php";
-        
-    ?>
-
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -24,7 +11,21 @@
     <script src="https://kit.fontawesome.com/735bc52976.js" crossorigin="anonymous"></script>
 </head>
 <body style="background-color: rgb(241, 241, 241);">
-    <?php navbar();?>
+   <?php 
+        session_name("usuario");
+        session_start();
+        if(isset($_SESSION['mail'])){
+           if(!($_SESSION['mail'] == "admin@shopping.com")){
+            echo "<script> window.location.href='index.php'</script>";
+           }
+        } else {
+         echo "<script> window.location.href='index.php'</script>";
+        }
+
+        include_once "navbarfooter.php";
+        
+   
+     navbar();?>
    
     <section class="container" style="margin-top: 5%; text-align:center; margin-bottom: 5%"> 
         <h1>Bienvenido administrador! ¿Qué desea hacer hoy?</h1>

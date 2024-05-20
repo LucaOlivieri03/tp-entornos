@@ -19,6 +19,8 @@
        if(!($_SESSION['mail'] == "admin@shopping.com")){
         echo "<script> window.location.href='index.php'</script>";
        }
+    } else {
+        echo "<script> window.location.href='index.php'</script>";
     }
 
     include_once "navbarfooter.php";
