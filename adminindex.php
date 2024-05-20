@@ -30,7 +30,7 @@
         <h1>Bienvenido administrador! ¿Qué desea hacer hoy?</h1>
            <div class="row row-cols-1 row-cols-md-3">
               <a class="col pd-5" href="crearlocales.php" style="text-decoration: none;"><div id="foto1" class="foto-general"><p class="texto-foto"></p></div></a>
-              <a class="col" href="#" style="text-decoration: none;"><div id="foto2" class="foto-general"><p class="texto-foto"></p></div></a>
+              <a class="col" href="modificar_eliminar_locales.php" style="text-decoration: none;"><div id="foto2" class="foto-general"><p class="texto-foto"></p></div></a>
               <a class="col" href="#" style="text-decoration: none;"><div id="foto3" class="foto-general"><p class="texto-foto"></p></div></a>
            </div>
 

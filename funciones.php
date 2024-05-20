@@ -30,5 +30,7 @@ function antiInyeccion($cadena){
     $cadena = stripslashes($cadena);
     return  $cadena;
 }
+
 ?>
+
 

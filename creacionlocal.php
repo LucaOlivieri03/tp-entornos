@@ -18,21 +18,10 @@ if(isset($_POST['nombrelocal'])){
             $bd = conexion();
             $bd->query("INSERT INTO locales (local_nombre, local_ubicacion, local_rubro, usuario_id) VALUES ('$nombre', '$ubicacion', '$rubro', '$dueno')");
 
-
         }
     }
 }
 
-
-function validarNombre($nombre, $bd){
-    $bd = $bd->query("SELECT * FROM locales WHERE local_nombre = '$nombre'");
-    if($bd->rowCount() == 0){
-       return True;
-    }
-    global $textoSalida;
-    $textoSalida = "El local ya fue creado";
-    return False;
-}
 
 function duenolocal($dueno, $bd){
     $bd = $bd->query("SELECT * FROM usuarios WHERE usuario_mail = '$dueno'");
@@ -48,5 +37,13 @@ function duenolocal($dueno, $bd){
     return '';
 }
 
-
+function validarNombre($nombre, $bd){
+    $bd = $bd->query("SELECT * FROM locales WHERE local_nombre = '$nombre'");
+    if($bd->rowCount() == 0){
+       return True;
+    }
+    global $textoSalida;
+    $textoSalida = "El local ya fue creado";
+    return False;
+}
 ?>
