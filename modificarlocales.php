@@ -28,7 +28,6 @@ if(isset($_POST['eliminar'])){
 
 }
 
-
 function duenolocal($dueno, $bd){
     $bd = $bd->query("SELECT * FROM usuarios WHERE usuario_mail = '$dueno'");
     if($bd->rowCount() > 0){
@@ -56,11 +55,12 @@ function validarNombre($nombre, $bd, $nombreviejo){
     } else {
         return True;
     }
-
-
     return False;
 }
 
+function rubroviejo($rubroviejo, $rubro){
+    return $rubroviejo == $rubro ? "selected" : "";
+    }
 
 function mostrarLocales(){
     $bd = conexion();
@@ -120,17 +120,20 @@ function mostrarLocales(){
             HTML;
             echo        '<input name="ubicacionlocal" value='.$registro["local_ubicacion"].' type="text" id="ubicacionlocal" class="form-control form-control-lg border-dark" minlength="1" maxlength="50" required/>';
             echo <<<HTML
-            <label class="form-label" for="ubicacionlocal">Ubicación del local</label>
+                <label class="form-label" for="ubicacionlocal">Ubicación del local</label>
                     </div>
 
                     <div class="form-outline mb-4">
                         <select name="rubrolocal" id="mailinicio" class="form-control form-control-lg border-dark" required>
-                            <option value="indumentaria">Indumentaria</option> 
-                            <option value="perfumeria">Perfumería</option>
-                            <option value="comida">Comida</option>
-                            <option value="tecnologia">Tecnología</option>
-                            <option value="optica">Óptica</option>
-                            <option value="servicios">Servicios</option>
+                HTML;
+                        echo '<option '.rubroviejo($registro["local_rubro"],"indumentaria").' value="indumentaria">Indumentaria</option>';
+                        echo '<option '.rubroviejo($registro["local_rubro"],"perfumeria").' value="perfumeria">Perfumería</option>';
+                        echo '<option '.rubroviejo($registro["local_rubro"],"comida").' value="comida">Comida</option>';
+                        echo '<option '.rubroviejo($registro["local_rubro"],"tecnologia").' value="tecnologia">Tecnología</option>';
+                        echo '<option '.rubroviejo($registro["local_rubro"],"optica").' value="optica">Óptica</option>';
+                        echo '<option '.rubroviejo($registro["local_rubro"],"servicios").' value="servicios">Servicios</option>';
+
+                echo <<<HTML
                         </select>
                         <label class="form-label" for="rubrolocal">Rubro del local</label>
                     </div>
@@ -158,6 +161,4 @@ function mostrarLocales(){
         }
     }
 }
-
-
 ?>
