@@ -20,15 +20,17 @@ function navbar(){
                     <a class="nav-link active text-light" aria-current="page" href="index.php">Home</a>
                   </li>
             HTML;
+            
             if(isset($_SESSION['mail'])){
               if($_SESSION['mail'] == 'admin@shopping.com'){
                 echo <<<HTML
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="adminindex.php">Panel de Control</a>
+                    <a class="nav-link text-light" href="adminindex.php"><strong>Panel de Control</strong></a>
                   </li>
                 HTML;
               }
-          } else{
+            }
+
               echo <<<HTML
                   <li class="nav-item">
                     <a class="nav-link text-light" href="#">Novedades</a>
@@ -36,9 +38,9 @@ function navbar(){
                   <li class="nav-item">
                     <a class="nav-link text-light" href="#">Promociones</a>
                   </li>
-                </ul> 
+              </ul>
           HTML;
-          }
+          
       echo $boton;
       echo <<<"HTML"
                     </div>
