@@ -9,11 +9,11 @@ if(isset($_POST['eliminar'])){
     $bd = $bd->query("DELETE FROM locales WHERE local_nombre = '$nombre'");
 } else if (isset($_POST['modificar'])){
     
-    $nombre = $_POST['nombrelocal'];
-    $ubicacion = $_POST['ubicacionlocal'];
+    $nombre = antiInyeccion($_POST['nombrelocal']);
+    $ubicacion = antiInyeccion($_POST['ubicacionlocal']);
 
-    $rubro = $_POST['rubrolocal'];
-    $nombreviejo = $_POST['modificar'];
+    $rubro = antiInyeccion($_POST['rubrolocal']);
+    $nombreviejo = antiInyeccion($_POST['modificar']);
 
     $bd = conexion();
 
