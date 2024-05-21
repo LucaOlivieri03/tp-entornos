@@ -9,11 +9,11 @@ if(isset($_POST['eliminar'])){
     $bd = $bd->query("DELETE FROM locales WHERE local_nombre = '$nombre'");
 } else if (isset($_POST['modificar'])){
     
-    $nombre = antiInyeccion($_POST['nombrelocal']);
-    $ubicacion = antiInyeccion($_POST['ubicacionlocal']);
+    $nombre = trim($_POST['nombrelocal']);
+    $ubicacion = trim($_POST['ubicacionlocal']);
 
-    $rubro = antiInyeccion($_POST['rubrolocal']);
-    $nombreviejo = antiInyeccion($_POST['modificar']);
+    $rubro = trim($_POST['rubrolocal']);
+    $nombreviejo = trim($_POST['modificar']);
 
     $bd = conexion();
 
@@ -110,15 +110,18 @@ function mostrarLocales(){
                 <form method="post">
                     <div class="form-outline mb-4">
             HTML;
-            
-            echo       '<input name="nombrelocal" value='.$registro["local_nombre"].' type="text" id="nombrelocal" class="form-control form-control-lg border-dark" minlength="1" maxlength="100" required/>';
+            ?>
+            <input name="nombrelocal" value='<?php echo $registro["local_nombre"]; ?>' type="text" id="nombrelocal" class="form-control form-control-lg border-dark" minlength="1" maxlength="100" required/>
+            <?php
             echo <<<HTML
                        <label class="form-label" for="nombrelocal">Nombre de local</label>
                        </div>
 
                        <div class="form-outline mb-4">
             HTML;
-            echo        '<input name="ubicacionlocal" value='.$registro["local_ubicacion"].' type="text" id="ubicacionlocal" class="form-control form-control-lg border-dark" minlength="1" maxlength="50" required/>';
+            ?>
+            <input name="ubicacionlocal" value='<?php echo $registro["local_ubicacion"]?>' type="text" id="ubicacionlocal" class="form-control form-control-lg border-dark" minlength="1" maxlength="50" required/>
+            <?php
             echo <<<HTML
                 <label class="form-label" for="ubicacionlocal">Ubicación del local</label>
                     </div>
@@ -151,7 +154,9 @@ function mostrarLocales(){
                     </div>
                 <!-- ACA -->
             HTML;
-            echo  '<button data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-lg btn-block" value='.$registro['local_nombre'].' name="modificar" type="submit">Confirmar cambios</button>';
+            ?>
+            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-lg btn-block" value='<?php $registro["local_nombre"]?>' name="modificar" type="submit">Confirmar cambios</button>
+            <?php
             echo <<<HTML
             </form>
                         </div>
