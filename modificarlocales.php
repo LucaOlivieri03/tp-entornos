@@ -10,6 +10,7 @@ if(isset($_POST['eliminar'])){
 } else if (isset($_POST['modificar'])){
     
     $nombre = trim($_POST['nombrelocal']);
+  
     $ubicacion = trim($_POST['ubicacionlocal']);
 
     $rubro = trim($_POST['rubrolocal']);
@@ -22,6 +23,7 @@ if(isset($_POST['eliminar'])){
         $dueno = duenolocal($_POST['duenolocal'], $bd);
         $bd = conexion();
         if($dueno != ''){
+
             $bd = $bd->query("UPDATE locales SET local_nombre = '$nombre', local_ubicacion = '$ubicacion', local_rubro = '$rubro', usuario_id = '$dueno' WHERE local_nombre = '$nombreviejo'");
         }
     } 
@@ -45,11 +47,13 @@ function duenolocal($dueno, $bd){
 
 function validarNombre($nombre, $bd, $nombreviejo){
     if(!($nombreviejo == $nombre)){
+        var_Dump($nombreviejo);
         $bd = $bd->query("SELECT * FROM locales WHERE local_nombre = '$nombre'");
     
         if($bd->rowCount() == 0){
             return True;
         }
+
         global $textoSalida;
         $textoSalida = "El local ya fue creado";
     } else {
@@ -76,19 +80,20 @@ function mostrarLocales(){
             $contador++;
             echo <<<HTML
             <div class="accordion-item">
-                <div class="md-5 row row-cols-3  py-2">
-                <div class="col-md-8">
-                <h4 class="accordion-header d-flex align-items-center">
+                <div class="md-5 row row-cols-3 py-2" style="word-break: break-all; word-break: break-word;">
+                <div class="col-md-8 ">
+                    <h4 class="accordion-header d-flex align-items-center">
             HTML;
 
-            echo '<p class="px-3 py-2 m-0">'.$registro["local_nombre"].'</p></h4></div>';
-            
+            echo '<p class="py-2 m-0" style="padding-left:5%;">'.$registro["local_nombre"].'</p></h4></div>';
             echo <<<HTML
 
             <div class="col-md-2 d-flex justify-content-md-end align-items-center">
                 <form method="post" class="m-0">
             HTML;
-                   echo '<button type="submit" name="eliminar" class="btn btn-danger" value='.$registro['local_nombre'].'>Eliminar local</button>';
+            ?>
+                <button type="submit" name="eliminar" class="btn btn-danger" value='<?php echo $registro["local_nombre"]?>'>Eliminar local</button>
+            <?php
             echo <<<HTML
                 </form>
             </div>
@@ -155,7 +160,7 @@ function mostrarLocales(){
                 <!-- ACA -->
             HTML;
             ?>
-            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-lg btn-block" value='<?php $registro["local_nombre"]?>' name="modificar" type="submit">Confirmar cambios</button>
+            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-lg btn-block" value="<?php echo $registro['local_nombre']?>" name="modificar" type="submit">Confirmar cambios</button>
             <?php
             echo <<<HTML
             </form>
